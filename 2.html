@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ALPHA REGISRATIONS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="2.css">
+</head>
+ <body>
+ <!-- contact1 -->
+
+  <section id="contact">
+    <section class="w3l-simple-contact-form1">
+      <div class="contact-form section-gap">
+        <div class="wrapper">
+          <div class="text-center">
+            <br>
+
+        </div>
+          <div class="contact-form" style="max-width: 450px; margin: 0 auto;">
+            <div class="form-mid">
+                <img src="./Interview-rafiki.png" width="400">
+                <h1 style="color: blue;">Register Now! </h1>
+              <form action="javascript:sendmail()" method="post">
+                <div class="field">
+                  <input type="text" class="form-control" name="Name" id="Name" placeholder="Name" required="">
+                </div>
+                <div class="field">
+                  <input type="email" class="form-control" name="Sender" id="Sender" placeholder="Email"
+                    required="">
+                </div>
+               
+                <div class="field">
+                    <input type="text" class="form-control" name="Subject" id="Subject" placeholder="Why You are Interested to join"
+                      required="">
+                  </div>
+                  <div class="field">
+                    <input type="text" class="form-control" name="city" id="city" placeholder="City/State"
+                      required="">
+                  </div>
+                  <div class="field">
+                    <input type="text" class="form-control" name="Phone" id="Phone" placeholder="Phone number"
+                      required="">
+                  </div>
+                <textarea name="Message" class="form-control" id="Message" placeholder="Tell About Yourself"
+                  required=""></textarea>
+                 <button type="submit" class="btn bg-btn btn-block mt-3 rounded-pill">SUBMIT</button></a>
+                <!-- <input type="button" class="btn bg-btn btn-block mt-3 rounded-pill" onclick="sendmail();"  value="SUBMIT"> -->
+  
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /contact1 -->
+    
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+  <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+   
+  <script>  
+  
+       function sendmail(){
+      
+              var name = $('#Name').val();
+              var email = $('#Sender').val();
+              var subject = $('#Subject').val();
+              var  Why = $('#Why').val();
+              var city = $('#city').val();
+              var Phone = $('#Phone').val();
+        var message = $('#Message').val();
+  
+              // var body = $('#body').val();
+  
+              var Body='Name: '+name+'<br>Email: '+email+'<br>Subject: '+subject+'<br>Message: '+message+'<br>Why: '+Why+'<br>city: '+city+'<br>Phone:'+Phone;
+              //console.log(name, phone, email, message,Why,city,Phone);
+  
+              Email.send({
+          SecureToken:"fbf31702-bb7f-4a4e-9c1c-4ccf17ee777f",
+                  To: 'akshithraj.denaurlen@gmail.com',
+                  From: "DENAURLEN ALPHA TEAM",
+                  Subject: "New message on contact from "+name,
+                  Body: Body
+              }).then(
+                  message =>{
+                      //console.log (message);
+                      if(message=='OK'){
+                      alert('Thank You');
+                      }
+                      else{
+                          console.error (message);
+                          alert('There is error at sending message. ')
+                          
+                      }
+  
+                  }
+              );
+  
+  
+  
+          }
+          <
+       
+        
+  
+      </script>
+   </script>

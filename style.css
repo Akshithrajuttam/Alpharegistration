@@ -1,0 +1,23 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif; 
+}
+.form-control:focus{
+    border-color:#ddd;
+    box-shadow: beige;
+}
+.bg-btn{
+    background: blue;
+    color:#fff;
+}
+ 
+
+  
