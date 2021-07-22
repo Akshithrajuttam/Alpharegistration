@@ -46,7 +46,7 @@
                 <textarea name="Message" class="form-control" id="Message" placeholder="Tell About Yourself"
                   required=""></textarea>
                  <button type="submit" class="btn bg-btn btn-block mt-3 rounded-pill">SUBMIT</button></a>
-                <!-- <input type="button" class="btn bg-btn btn-block mt-3 rounded-pill" onclick="sendmail();"  value="SUBMIT"> -->
+                <!-- <input type="button" class="btn bg-btn btn-block mt-3 rounded-pill" onclick="sendmail()";  value="SUBMIT"> -->
   
               </form>
             </div>
@@ -70,7 +70,6 @@
               var name = $('#Name').val();
               var email = $('#Sender').val();
               var subject = $('#Subject').val();
-              var  Why = $('#Why').val();
               var city = $('#city').val();
               var Phone = $('#Phone').val();
         var message = $('#Message').val();
@@ -83,28 +82,29 @@
               Email.send({
           SecureToken:"fbf31702-bb7f-4a4e-9c1c-4ccf17ee777f",
                   To: 'akshithraj.denaurlen@gmail.com',
-                  From: "DENAURLEN ALPHA TEAM",
+                  From: "denaurlen@gmail.com",
                   Subject: "New message on contact from "+name,
                   Body: Body
-              }).then(
-                  message =>{
-                      //console.log (message);
-                      if(message=='OK'){
-                      alert('Thank You');
-                      }
-                      else{
-                          console.error (message);
-                          alert('There is error at sending message. ')
-                          
-                      }
-  
-                  }
-              );
-  
-  
-  
-          }
-          <
+                }).then(
+				message =>{
+					//console.log (message);
+					if(message=='OK'){
+					alert('Your Message has been send. Thank you for connecting.');
+					}
+					else{
+						console.error (message);
+						alert('There is error at sending message. ')
+						
+					}
+
+				}
+			);
+
+
+
+		}
+
+          
        
         
   
