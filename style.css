@@ -1,23 +1,29 @@
 *{
-    margin:0;
-    padding:0;
     box-sizing: border-box;
 }
-body{
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Poppins', sans-serif; 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    background-color: #fff;
 }
-.form-control:focus{
-    border-color:#ddd;
-    box-shadow: beige;
-}
-.bg-btn{
-    background: blue;
-    color:#fff;
-}
- 
 
-  
+article{
+    float: left;
+    padding: 20px;
+    width: 70%;
+    background-color: #fff;
+    height: 300px;
+}
+footer{
+    background-color: blue;
+padding: 10px;
+text-align: center;
+color: white;
+}
+@media (max-width:600px){
+    nav,article{
+        width: 100%;
+        height: auto;
+
+    }
+}
