@@ -1,28 +1,103 @@
-*{
-    box-sizing: border-box;
-}
+@import url("https://fonts.googleapis.com/css?family=Rajdhani:500,700&display=swap");
+
+* {
+  box-sizing: border-box;
+} 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: italic;
-    background-color: #fff;
+  align-items: center;
+  background: #fff;   
+  display: flex;
+  font-family: cursive;
+  height: 100vh;
+  justify-content: center;
+} 
+.contact-wrapper{
+  background:#fff;
+  padding:4em 2em;
+  width:60em;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.left_side,
+.right_side{
+  width:50%;
+  padding:0 3em;
+}
+.right_side > h2{
+  color:#3e3f5e;
+  font-size: 1.75em;
+  text-align: center;
+}
+form{
+  margin:2em 0;
+}
+form > .form-row{
+
+  display:flex;
+  margin:.75em 0;
+  position:relative;
 }
 
-article{
-    float: left;
-    padding: 20px;
-    width: 70%;
-    background-color: #fff;
-    height: 300px;
+form > .form-row > input,
+form > .form-row > button{
+  border-radius: .5em;
+  padding:1em .5em;
+  width:100%;
+  font-family: inherit;
 }
-footer{
+form > .form-row > input{
+  font-weight: bold;
+  width:100%;
+}
+form > .form-row > input[type=text],
+form > .form-row > input[type=password]{
+  border:.075em solid #ddd;
+}
+form > .form-row > input:valid + span{
+  top:0;
+  font-size: .90rem;
+}
 
-text-align: center;
-color: white;
+form > .form-row > input:required{
+  box-shadow: none;
 }
-@media (max-width:600px){
-    nav,article{
-        width: 100%;
-        height: auto;
+form > .form-row > input:focus{
+  border-color: #991601;
+  outline:none;
+}
+form > .form-row > input:focus:invalid{
+  box-shadow: none;
+  top:50%;
+}
+form > .form-row > input:focus:valid{
+  top:0;
+}
+form > .form-row > button{
+  background-color: #991601;
+  border:.10em solid #991601;
+  color:#fff;
+  cursor: pointer;
+  font-weight: bold;
 
-    }
 }
+form > .form-row > button:focus{
+  border:0.1em solid #991601;
+  outline:none;
+}
+
+
+
+@media (max-width:1500px){
+  .contact-wrapper{
+    flex-direction: column;
+  }
+  .left_side,
+  .right_side{
+    width:80%;
+    padding:0 3em;
+  }
+
+}
+
+  
